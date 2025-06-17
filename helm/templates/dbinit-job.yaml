@@ -29,6 +29,10 @@ spec:
               value: {{ if .Values.web.env.RAILS_LOG_TO_STDOUT }}{{ .Values.web.env.RAILS_LOG_TO_STDOUT | quote }}{{ else }}"false"{{ end }}
             - name: POSTGRES_DBNAME
               value: {{ if .Values.web.env.POSTGRES_DBNAME }}{{ .Values.web.env.POSTGRES_DBNAME | quote }}{{ else }}"astuto"{{ end }}
+            - name: ADMIN_EMAIL
+              value: {{ if .Values.web.env.ADMIN_EMAIL }}{{ .Values.web.env.ADMIN_EMAIL | quote }}{{ else }}"admin@example.com"{{ end }}
+            - name: ADMIN_PASSWORD
+              value: {{ if .Values.web.env.ADMIN_PASSWORD }}{{ .Values.web.env.ADMIN_PASSWORD | quote }}{{ else }}"password"{{ end }}
           volumeMounts:
             - name: db-secret
               mountPath: {{ .Values.web.secretMountPath }}

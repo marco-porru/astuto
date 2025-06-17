@@ -15,10 +15,20 @@ if [ -f "$APP_ROOT/config/database.yml.erb" ]; then
   ruby -rerb -e "File.write('$APP_ROOT/config/database.yml', ERB.new(File.read('$APP_ROOT/config/database.yml.erb')).result)"
 fi
 
-# Wait for database
-until bundle exec rake db:version; do
-  >&2 echo "Waiting for postgres to initialize..."
-  sleep 1
+# Wait for database, try to create if connection fails
+db_ready=0
+while [ $db_ready -eq 0 ]; do
+  if bundle exec rake db:version > /dev/null 2>&1; then
+    db_ready=1
+  else
+    echo "Database not ready or does not exist. Trying to create..."
+    if bundle exec rake db:create > /dev/null 2>&1; then
+      echo "Database created."
+    else
+      >&2 echo "Waiting for postgres to initialize..."
+      sleep 1
+    fi
+  fi
 done
 
 # Update or create database
