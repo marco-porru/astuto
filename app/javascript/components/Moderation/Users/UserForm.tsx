@@ -1,5 +1,5 @@
 import * as React from 'react';
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 
 import Button from '../../common/Button';
 import IUser, { UserRoles, USER_ROLE_ADMIN, USER_ROLE_MODERATOR, USER_ROLE_USER } from '../../../interfaces/IUser';

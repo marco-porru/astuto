@@ -2,15 +2,14 @@
   max-width: 640px;
   margin: 0 auto;
 
-  h2 { @extend .mb-4; }
+  h2 { @extend .mb-4 !optional; }
 
   .billingStatusBadge {
-    @extend
-      .badge,
-      .badgeLight,
-      .p-2,
-      .ml-1,
-      .mr-1;
+    @extend .badge !optional;
+    @extend .badgeLight !optional;
+    @extend .p-2 !optional;
+    @extend .ml-1 !optional;
+    @extend .mr-1 !optional;
   
     width: fit-content;
     text-transform: uppercase;
@@ -22,28 +21,26 @@
   }
   
   .pricingTable {
-    @extend
-      .d-flex,
-      .flex-column,
-      .mt-4,
-      .mb-4;
+    @extend .d-flex !optional;
+    @extend .flex-column !optional;
+    @extend .mt-4 !optional;
+    @extend .mb-4 !optional;
 
     h3 { text-align: center; }
 
     .pricingPlansNav {
-      @extend
-        .nav,
-        .nav-pills,
-        .align-self-center,
-        .px-2,
-        .py-1,
-        .mt-2;
+      @extend .nav !optional;
+      @extend .nav-pills !optional;
+      @extend .align-self-center !optional;
+      @extend .px-2 !optional;
+      @extend .py-1 !optional;
+      @extend .mt-2 !optional;
 
       background-color: var(--astuto-grey-light);
       border-radius: 0.5rem;
 
       .yearlyPlanDiscount {
-        @extend .ml-2;
+        @extend .ml-2 !optional;
         color: red;
       }
 
@@ -52,9 +49,8 @@
       }
 
       a {
-        @extend
-          .px-3,
-          .py-1;
+        @extend .px-3 !optional;
+        @extend .py-1 !optional;
 
         color: var(--astuto-black);
         cursor: pointer;
@@ -71,25 +67,23 @@
     }
 
     .pricingTableColumn {
-      @extend
-        .card,
-        .my-2,
-        .p-4;
+      @extend .card !optional;
+      @extend .my-2 !optional;
+      @extend .p-4 !optional;
 
       width: 100%;
       max-width: 400px;
       margin: 0 auto;
 
       .priceContainer {
-        @extend
-          .d-flex,
-          .justify-content-between;
+        @extend .d-flex !optional;
+        @extend .justify-content-between !optional;
 
         .price {
           .amount { font-size: 36px; }
         }
         .priceYearly {
-          @extend .align-self-end;
+          @extend .align-self-end !optional;
 
           .amount { font-size: 26px; }
         }
@@ -103,20 +97,19 @@
   }
 
   .checkoutContainer {
-    @extend .mt-4;
+    @extend .mt-4 !optional;
 
     a { display: block; text-align: center; }
 
-    #checkout { @extend .my-2; }
+    #checkout { @extend .my-2 !optional; }
   }
 
   .billingUsefulLinks {
-    @extend
-      .d-flex,  
-      .mt-4;
+    @extend .d-flex !optional;
+    @extend .mt-4 !optional;
     
     margin: 0 auto;
 
-    a { @extend .mx-2; }
+    a { @extend .mx-2 !optional; }
   }
 }

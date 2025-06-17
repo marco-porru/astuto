@@ -1,5 +1,5 @@
 import * as React from 'react';
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 import { SubmitHandler, useFieldArray, useForm } from 'react-hook-form';
 
 import { IWebhook, WEBHOOK_HTTP_METHOD_DELETE, WEBHOOK_HTTP_METHOD_PATCH, WEBHOOK_HTTP_METHOD_POST, WEBHOOK_HTTP_METHOD_PUT, WEBHOOK_TRIGGER_DELETED_POST, WEBHOOK_TRIGGER_NEW_COMMENT, WEBHOOK_TRIGGER_NEW_POST, WEBHOOK_TRIGGER_NEW_POST_PENDING_APPROVAL, WEBHOOK_TRIGGER_NEW_USER, WEBHOOK_TRIGGER_NEW_VOTE, WEBHOOK_TRIGGER_POST_STATUS_CHANGE, WebhookHttpMethod, WebhookTrigger } from '../../../interfaces/IWebhook';

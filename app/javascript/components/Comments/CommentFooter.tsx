@@ -1,5 +1,5 @@
 import * as React from 'react';
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 
 import Separator from '../common/Separator';
 import { MutedText } from '../common/CustomTexts';

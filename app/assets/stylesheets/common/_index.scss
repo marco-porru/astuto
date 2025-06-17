@@ -7,7 +7,7 @@ body {
 }
 
 .btnPrimary {
-  @extend .btn;
+  @extend .btn !optional;
 
   color: white;
   background-color: var(--primary-color);
@@ -18,7 +18,7 @@ body {
 }
 
 .btnOutlinePrimary {
-  @extend .btn;
+  @extend .btn !optional;
 
   background-color: transparent;
   color: var(--primary-color);
@@ -33,7 +33,7 @@ body {
 }
 
 .card {
-  @extend .card;
+  @extend .card !optional;
 
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04),0 2px 4px -1px rgba(0, 0, 0, 0.03);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -44,7 +44,7 @@ body {
 }
 
 .card3D {
-  @extend .card;
+  @extend .card !optional;
 
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
@@ -55,10 +55,9 @@ body {
 
 // General container for pages with siderbar + main content
 .twoColumnsContainer {
-  @extend
-    .d-flex,
-    .justify-content-between,
-    .align-items-start;
+  @extend .d-flex !optional;
+  @extend .justify-content-between !optional;
+  @extend .align-items-start !optional;
 
   flex-direction: row;
 
@@ -68,18 +67,16 @@ body {
 
   // Make the main content full width
   & > div:nth-child(2) {
-    @extend
-      .flex-grow-1,
-      .w-100;
+    @extend .flex-grow-1 !optional;
+    @extend .w-100 !optional;
   }
 }
 
 .box {
-  @extend
-    .card,
-    .flex-grow-1,
-    .p-3,
-    .mb-3;
+  @extend .card !optional;
+  @extend .flex-grow-1 !optional;
+  @extend .p-3 !optional;
+  @extend .mb-3 !optional;
 }
 
 .sidebar {
@@ -93,16 +90,15 @@ body {
   }
 
   .sidebarBox {
-    @extend
-      .card,
-      .d-flex,
-      .flex-column,
-      .justify-content-start,
-      .align-items-center,
-      .flex-grow-0,
-      .flex-shrink-0,
-      .mb-3,
-      .p-2;
+    @extend .card !optional;
+    @extend .d-flex !optional;
+    @extend .flex-column !optional;
+    @extend .justify-content-start !optional;
+    @extend .align-items-center !optional;
+    @extend .flex-grow-0 !optional;
+    @extend .flex-shrink-0 !optional;
+    @extend .mb-3 !optional;
+    @extend .p-2 !optional;
 
     width: 280px;
     margin-right: 16px;
@@ -114,12 +110,11 @@ body {
 }
 
 .verticalNavigation {
-  @extend
-    .nav,
-    .flex-column,
-    .nav-pills,
-    .text-center,
-    .align-self-stretch;
+  @extend .nav !optional;
+  @extend .flex-column !optional;
+  @extend .nav-pills !optional;
+  @extend .text-center !optional;
+  @extend .align-self-stretch !optional;
 
   a {
     color: var(--astuto-grey);
@@ -137,12 +132,11 @@ body {
 }
 
 .drag-zone {
-  @extend
-    .align-self-center,
-    .pl-1,
-    .pr-4,
-    .pt-1,
-    .pb-1;
+  @extend .align-self-center !optional;
+  @extend .ps-1 !optional;
+  @extend .pe-4 !optional;
+  @extend .pt-1 !optional;
+  @extend .pb-1 !optional;
 
   cursor: grab;
 
@@ -156,24 +150,23 @@ body {
 }
 
 .badge {
-  @extend
-    .badge,
-    .badge-pill,
-    .p-2,
-    .ml-1,
-    .mr-1;
+  @extend .badge !optional;
+  @extend .rounded-pill !optional; // Bootstrap 5 replacement for .badge-pill
+  @extend .p-2 !optional;
+  @extend .ms-1 !optional;
+  @extend .me-1 !optional;
 
   font-size: 13px;
   text-transform: uppercase;
 }
 
 .badgeLight {
-  @extend .badge-light;
+  @extend .bg-light !optional;
   background-color: var(--astuto-grey-light);
 }
-.badgeWarning { @extend .badge-warning; }
-.badgeDanger { @extend .badge-danger; }
-.badgeSuccess { @extend .badge-success; }
+.badgeWarning { @extend .bg-warning !optional; }
+.badgeDanger { @extend .bg-danger !optional; }
+.badgeSuccess { @extend .bg-success !optional; }
 
 .container {
   max-width: 960px;
@@ -193,13 +186,14 @@ body {
   border-radius: 100%;
 }
 
+// Bootstrap 5: custom-control, custom-switch, custom-control-input, custom-control-label, custom-select sono deprecati.
+// Usa form-check, form-switch, form-select
 .checkboxSwitch {
-  @extend 
-    .custom-control,
-    .custom-switch;
+  @extend .form-check !optional;
+  @extend .form-switch !optional;
 
   & > input[type="checkbox"] {
-    @extend .custom-control-input;
+    @extend .form-check-input !optional;
 
     &:focus ~ label::before {
       box-shadow: 0 0 0 0.25rem var(--primary-color-light);
@@ -211,7 +205,7 @@ body {
   }
 
   & > label {
-    @extend .custom-control-label;
+    @extend .form-check-label !optional;
 
     &::before {
       transform: scale(1.2);
@@ -231,8 +225,7 @@ body {
 }
 
 .selectPicker {
-  @extend
-    .custom-select;
+  @extend .form-select !optional;
 
   &:focus {
     box-shadow: 0 0 0 0.25rem var(--primary-color-light);
@@ -277,13 +270,12 @@ body {
 }
 
 .oauthProviderBtn {
-  @extend
-    .btn,
-    .btn-block,
-    .btn-outline-dark,
-    .mt-2,
-    .mb-2,
-    .p-0;
+  @extend .btn !optional;
+  @extend .btn-block !optional;
+  @extend .btn-outline-dark !optional;
+  @extend .mt-2 !optional;
+  @extend .mb-2 !optional;
+  @extend .p-0 !optional;
 
   height: 38px;
 
@@ -293,7 +285,7 @@ body {
   }
 
   .oauthProviderText {
-    @extend .ml-2;
+    @extend .ms-2 !optional;
     
     vertical-align: middle;
   }
@@ -315,23 +307,21 @@ body {
 }
 
 .noActiveSubscriptionBanner {
-  @extend
-    .alert,
-    .alert-warning,
-    .text-center,
-    .m-0;
+  @extend .alert !optional;
+  @extend .alert-warning !optional;
+  @extend .text-center !optional;
+  @extend .m-0 !optional;
 }
 
 .promoBanner {
-  @extend
-    .alert,
-    .alert-primary,
-    .text-center,
-    .m-0;
+  @extend .alert !optional;
+  @extend .alert-primary !optional;
+  @extend .text-center !optional;
+  @extend .m-0 !optional;
 }
 
 .highlighted {
-  @extend .p-2;
+  @extend .p-2 !optional;
   
   background-color: rgba(255, 255, 0, 0.2);
 }

@@ -1,5 +1,5 @@
 import { FieldError } from "react-hook-form";
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 
 export const getLabel = (
   entity: string,

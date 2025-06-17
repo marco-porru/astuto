@@ -3,20 +3,19 @@
 }
 
 ul.usersList {
-  @extend
-    .pl-1;
+  @extend .pl-1 !optional;
 
   list-style: none;
 
   li.userEditable {
-    @extend
-      .d-flex,
-      .justify-content-between,
-      .my-2,
-      .p-3;
+    @extend .d-flex !optional;
+    @extend .justify-content-between !optional;
+    @extend .my-2 !optional;
+    @extend .p-3 !optional;
 
     .userAvatar {
-      @extend .mr-3, .align-self-center;
+      @extend .mr-3 !optional;
+      @extend .align-self-center !optional;
     }
 
     .userFullName {
@@ -24,29 +23,30 @@ ul.usersList {
     }
 
     .userInfo {
-      @extend .d-flex;
+      @extend .d-flex !optional;
 
       .userFullNameRoleStatus {
-        @extend
-          .d-flex,
-          .flex-column;
+        @extend .d-flex !optional;
+        @extend .flex-column !optional;
       }
     }
 
     .userEditableActions {
-      @extend .d-flex, .align-self-center;
+      @extend .d-flex !optional;
+      @extend .align-self-center !optional;
     }
 
     .userForm {
-      @extend .d-flex;
+      @extend .d-flex !optional;
 
       .userFullNameRoleForm {
-        @extend .d-flex, .flex-column;
+        @extend .d-flex !optional;
+        @extend .flex-column !optional;
       }
     }
 
     .updateUserButton {
-      @extend .align-self-center;
+      @extend .align-self-center !optional;
       margin-left: 16px;
     }
 

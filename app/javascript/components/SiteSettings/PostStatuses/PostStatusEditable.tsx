@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Draggable } from 'react-beautiful-dnd';
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 
 import PostStatusLabel from "../../common/PostStatusLabel";
 import DragZone from '../../common/DragZone';

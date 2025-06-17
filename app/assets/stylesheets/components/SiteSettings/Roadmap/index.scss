@@ -1,8 +1,7 @@
 .roadmapPostStatuses {
-  @extend
-    .d-flex,
-    .flex-row,
-    .flex-wrap;
+  @extend .d-flex !optional;
+  @extend .flex-row !optional;
+  @extend .flex-wrap !optional;
 
   min-height: 150px;
   box-sizing: border-box;
@@ -18,10 +17,9 @@
   }
 
   .roadmapPostStatus {
-    @extend
-      .card,
-      .m-2,
-      .p-0;
+    @extend .card !optional;
+    @extend .m-2 !optional;
+    @extend .p-0 !optional;
 
     @include media-breakpoint-down(sm) {
       flex: 0 0 100%;
@@ -38,22 +36,21 @@
     &.notDragging { transform: none !important; }
 
     .roadmapPostStatusHeader {
-      @extend
-        .d-flex,
-        .flex-row,
-        .card-header;
+      @extend .d-flex !optional;
+      @extend .flex-row !optional;
+      @extend .card-header !optional;
 
       color: white;
       padding: 8px 4px;
       text-transform: uppercase;
 
       .titleText {
-        @extend .align-self-center;
+        @extend .align-self-center !optional;
       }
     }
   }
 }
 
 #roadmapEmbedCode {
-  @extend .mt-4;
+  @extend .mt-4 !optional;
 }

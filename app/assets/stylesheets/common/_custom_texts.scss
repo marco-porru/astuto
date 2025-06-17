@@ -4,23 +4,20 @@
 */
 
 .titleText {
-  @extend
-   .font-weight-bolder;
+  @extend .font-weight-bolder !optional;
 }
 
 .boxTitleText {
-  @extend
-    .font-weight-bolder,
-    .text-uppercase,
-    .mb-2;
+  @extend .font-weight-bolder !optional;
+  @extend .text-uppercase !optional;
+  @extend .mb-2 !optional;
 
   font-size: 16px;
 }
 
 .centeredText {
-  @extend
-    .text-center,
-    .p-2;
+  @extend .text-center !optional;
+  @extend .p-2 !optional;
 }
 
 .mutedText {
@@ -28,38 +25,33 @@
 }
 
 .smallMutedText {
-  @extend
-    .mutedText,
-    .mt-1,
-    .mb-0;
+  @extend .mutedText !optional;
+  @extend .mt-1 !optional;
+  @extend .mb-0 !optional;
   
   font-size: smaller;
 }
 
 .uppercaseText {
-  @extend
-    .text-secondary,
-    .text-uppercase,
-    .font-weight-light;
+  @extend .text-secondary !optional;
+  @extend .text-uppercase !optional;
+  @extend .font-weight-light !optional;
   
-    font-size: 13px;
+  font-size: 13px;
 }
 
 .successText {
-  @extend
-    .text-success,
-    .text-center;
+  @extend .text-success !optional;
+  @extend .text-center !optional;
 }
 
 .dangerText {
-  @extend
-    .text-danger,
-    .text-center;
+  @extend .text-danger !optional;
+  @extend .text-center !optional;
 }
 
 .descriptionText {
-  @extend
-    .text-muted;
+  @extend .text-muted !optional;
 
   max-height: 48px;
   overflow-y: hidden;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 import { WebhookPages } from './WebhooksSiteSettingsP';
 import { IWebhook } from '../../../interfaces/IWebhook';
 import WebhookListItem from './WebhookListItem';

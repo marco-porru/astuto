@@ -1,6 +1,6 @@
 // Entry point for your Sass build
 
-/* Booststrap */
+/* Bootstrap */
 @import 'vendors/bootstrap_custom';
 
 /* Constants */
@@ -29,7 +29,7 @@
 @import 'components/SiteSettings/PostStatuses';
 @import 'components/SiteSettings/Roadmap';
 @import 'components/SiteSettings/Authentication';
-@import 'components/SiteSettings/Appearance/';
+@import 'components/SiteSettings/Appearance';
 @import 'components/SiteSettings/Invitations';
 @import 'components/SiteSettings/Webhooks';
 

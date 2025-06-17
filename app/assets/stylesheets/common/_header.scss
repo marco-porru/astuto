@@ -1,8 +1,7 @@
 .header {
-  @extend
-    .navbar,
-    .navbar-expand-md,
-    .navbar-light;
+  @extend .navbar !optional;
+  @extend .navbar-expand-md !optional;
+  @extend .navbar-light !optional;
 
   position: sticky;
   z-index: 1;
@@ -19,16 +18,15 @@
   margin-bottom: 1em;
 
   .brand {
-    @extend .navbar-brand;
+    @extend .navbar-brand !optional;
 
     font-size: 18pt;
     font-weight: 700;
 
     .logo {
-      @extend
-        .d-inline-block,
-        .align-top,
-        .mr-2;
+      @extend .d-inline-block !optional;
+      @extend .align-top !optional;
+      @extend .mr-2 !optional;
 
       height: 36px;
     }
@@ -39,7 +37,7 @@
   }
 
   .navbarToggler {
-    @extend .navbar-toggler;
+    @extend .navbar-toggler !optional;
 
     &:focus {
       outline: none;
@@ -47,14 +45,12 @@
   }
 
   .boardsNav {
-    @extend
-      .navbar-nav,
-      .mr-auto;
+    @extend .navbar-nav !optional;
+    @extend .mr-auto !optional;
 
     .nav-item {
-      @extend
-        .badge,
-        .text-uppercase;
+      @extend .badge !optional;
+      @extend .text-uppercase !optional;
       
       font-size: 14px;
       text-align: left;
@@ -62,23 +58,21 @@
       a:hover { color: var(--primary-color); }
       
       &.active {
-        @extend .badgeLight;
+        @extend .badgeLight !optional;
 
-        a { color: var(--primary-color) !important };
+        a { color: var(--primary-color) !important; }
       }
     }
 
   }
 
   .profileNav {
-    @extend
-      .navbar-nav,
-      .ml-auto;
+    @extend .navbar-nav !optional;
+    @extend .ml-auto !optional;
 
     .profileToggle {
-      @extend
-        .nav-link,
-        .dropdown-toggle;
+      @extend .nav-link !optional;
+      @extend .dropdown-toggle !optional;
 
       &::after { vertical-align: middle; }
     }

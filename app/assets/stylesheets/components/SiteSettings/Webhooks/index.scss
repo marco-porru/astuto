@@ -1,5 +1,6 @@
 .previewStyling {
-  @extend .mt-4, .p-3;
+  @extend .mt-4 !optional;
+  @extend .p-3 !optional;
 
   max-height: 400px;
   max-width: 600px;
@@ -10,53 +11,56 @@
 }
 
 a.backButton {
-  @extend .mb-2, .align-self-start;
+  @extend .mb-2 !optional;
+  @extend .align-self-start !optional;
 
   font-size: 18px;
 }
 
 .webhooksIndexPage {
   .webhooksTitle {
-    @extend
-      .d-flex,
-      .mb-2;
+    @extend .d-flex !optional;
+    @extend .mb-2 !optional;
 
     button {
-      @extend .ml-2;
+      @extend .ml-2 !optional;
 
       height: min-content;
     }
   }
 
   .webhooksList {
-    @extend .pl-1;
+    @extend .pl-1 !optional;
 
     list-style: none;
 
-    h4 { @extend .mb-0, .mt-2; }
-    ul { @extend .pl-0; }
+    h4 {
+      @extend .mb-0 !optional;
+      @extend .mt-2 !optional;
+    }
+    ul { @extend .pl-0 !optional; }
 
     .webhookListItem {
-      @extend
-        .d-flex,
-        .justify-content-between,
-        .mb-2,
-        .p-2;
+      @extend .d-flex !optional;
+      @extend .justify-content-between !optional;
+      @extend .mb-2 !optional;
+      @extend .p-2 !optional;
 
       .webhookInfo {
-        @extend .d-flex;
+        @extend .d-flex !optional;
 
         column-gap: 32px;
 
         .webhookName { font-size: 18px; }
         .webhookDescription {
-          @extend .mutedText, .mb-1;
+          @extend .mutedText !optional;
+          @extend .mb-1 !optional;
           font-size: smaller;
         }
       }
       
       .webhookActions {
-        @extend .d-flex;
+        @extend .d-flex !optional;
 
         align-self: center;
       }
@@ -70,10 +74,9 @@ a.backButton {
   }
   
   .httpBodyActions {
-    @extend
-      .d-flex,
-      .justify-content-between,
-      .mt-1;
+    @extend .d-flex !optional;
+    @extend .justify-content-between !optional;
+    @extend .mt-1 !optional;
 
     div:first-child {
       min-width: 250px;
@@ -86,41 +89,40 @@ a.backButton {
   }
 
   .urlAndHttpBodyPreview {
-    @extend .mt-3;
+    @extend .mt-3 !optional;
 
     #preview {
-      @extend .previewStyling;
+      @extend .previewStyling !optional;
       margin-top: 0 !important;
     }
   }
 
   .formGroupHttpHeaders {
-    @extend .mb-0;
+    @extend .mb-0 !optional;
 
-    div.formRow { @extend .mb-0; }
+    div.formRow { @extend .mb-0 !optional; }
 
     div.formRow:last-child {
-      div.formGroup { @extend .mb-1; }
+      div.formGroup { @extend .mb-1 !optional; }
     }
   }
 
   .deleteHeaderActionLinkContainer {
-    @extend
-      .d-flex,
-      .align-self-end;
+    @extend .d-flex !optional;
+    @extend .align-self-end !optional;
   }
 
-  .submitWebhookFormButton { @extend .mt-4; }
+  .submitWebhookFormButton { @extend .mt-4 !optional; }
 }
 
 .webhookTestPage {
   .webhookActions {
-    @extend .d-flex;
+    @extend .d-flex !optional;
   }
 
   .webhookTestResponse {
-    @extend .mt-4;
+    @extend .mt-4 !optional;
 
-    #testHttpResponse { @extend .previewStyling; }
+    #testHttpResponse { @extend .previewStyling !optional; }
   }
 }

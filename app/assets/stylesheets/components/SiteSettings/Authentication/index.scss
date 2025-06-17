@@ -1,28 +1,27 @@
 .authenticationIndexPage {
   .oauthProvidersTitle {
-    @extend .d-flex;
+    @extend .d-flex !optional;
 
     button {
-      @extend .ml-2;
+      @extend .ml-2 !optional;
 
       height: min-content;
     }
   }
 
   .oAuthsList {
-    @extend .pl-1;
+    @extend .pl-1 !optional;
 
     list-style: none;
 
     .oAuthListItem {
-      @extend
-        .d-flex,
-        .justify-content-between,
-        .my-2,
-        .p-3;
+      @extend .d-flex !optional;
+      @extend .justify-content-between !optional;
+      @extend .my-2 !optional;
+      @extend .p-3 !optional;
 
       .oAuthInfo {
-        @extend .d-flex;
+        @extend .d-flex !optional;
 
         column-gap: 32px;
 
@@ -32,15 +31,15 @@
       }
       
       .oAuthActions {
-        @extend .d-flex;
+        @extend .d-flex !optional;
 
         align-self: center;
       }
 
       .defaultOAuthDiv {
-        @extend .d-flex;
+        @extend .d-flex !optional;
 
-        .defaultOAuthLabel { @extend .align-self-center; }
+        .defaultOAuthLabel { @extend .align-self-center !optional; }
       }
     }
   }
@@ -48,13 +47,15 @@
 
 .authenticationFormPage {
   a.backButton {
-    @extend .mb-2, .align-self-start;
+    @extend .mb-2 !optional;
+    @extend .align-self-start !optional;
 
     font-size: 18px;
   }
 
   .oAuthLogoPreview {
-    @extend .d-block, .my-2;
+    @extend .d-block !optional;
+    @extend .my-2 !optional;
   
     position: relative;
     display: inline-block;
@@ -74,5 +75,5 @@
     .oAuthLogoPreviewImg { filter: grayscale(100%); }
   }
 
-  .oAuthLogoActions { @extend .d-flex; }
+  .oAuthLogoActions { @extend .d-flex !optional; }
 }

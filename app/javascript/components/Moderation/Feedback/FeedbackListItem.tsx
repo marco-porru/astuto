@@ -1,5 +1,5 @@
 import React from 'react';
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 
 import IPost, { PostApprovalStatus } from '../../../interfaces/IPost';
 import { AnonymousIcon, ApproveIcon, RejectIcon } from '../../common/Icons';

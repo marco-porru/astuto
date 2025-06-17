@@ -14,7 +14,7 @@
 }
 
 .new_user, .edit_user {
-  @extend .card;
+  @extend .card !optional;
 
   width: 100%;
   max-width: 360px;
@@ -25,14 +25,14 @@
   margin: 0 auto;
 
   label[for=user_notifications_enabled] {
-    @extend .mb-0;
+    @extend .mb-0 !optional;
   }
 }
 
 .apiKeyGenerateButton { width: 100%; }
 
 .deviseLinks {
-  @extend .new_user;
+  @extend .new_user !optional;
 
   display: flex;
   flex-direction: column;
@@ -43,18 +43,18 @@
 }
 
 .formRow {
-  @extend .form-row;
+  @extend .form-row !optional;
 
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .formGroup {
-  @extend .form-group;
+  @extend .form-group !optional;
 }
 
 .formControl {
-  @extend .form-control;
+  @extend .form-control !optional;
 
   &.invalid {
     border-color: red;
@@ -62,6 +62,5 @@
 }
 
 .switch {
-  @extend
-    .custom-control-input;
+  @extend .custom-control-input !optional;
 }

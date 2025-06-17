@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 
 import Box from '../../common/Box';
 import RoadmapEmbedding from './RoadmapEmbedding';

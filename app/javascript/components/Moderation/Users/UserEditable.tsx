@@ -1,5 +1,5 @@
 import * as React from "react";
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 
 import IUser, { UserRoles, USER_ROLE_ADMIN, USER_ROLE_MODERATOR, USER_ROLE_OWNER, USER_ROLE_USER, USER_STATUS_ACTIVE, USER_STATUS_BLOCKED, USER_STATUS_DELETED } from "../../../interfaces/IUser";
 import Separator from "../../common/Separator";

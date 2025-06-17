@@ -3,9 +3,8 @@
 
 .roadmap {
   .filters {
-    @extend
-      .d-flex,
-      .mb-4;
+    @extend .d-flex !optional;
+    @extend .mb-4 !optional;
 
     gap: 16px;
 
@@ -17,21 +16,19 @@
       @include media-breakpoint-down(sm) { width: 100%; }
     }
 
-    .boardSelect { @extend .align-self-end; }
+    .boardSelect { @extend .align-self-end !optional; }
   }
 
   .roadmapColumns {
-    @extend
-      .d-flex,
-      .justify-content-start,
-      .flex-wrap;
+    @extend .d-flex !optional;
+    @extend .justify-content-start !optional;
+    @extend .flex-wrap !optional;
   
     gap: 16px;
   
     .roadmapColumn {
-      @extend
-        .card,
-        .p-0;
+      @extend .card !optional;
+      @extend .p-0 !optional;
   
       width: calc(33% - 9px); // each col takes 1/3 of the space minus 9px (to account for flex-gap: 16px, otherwise it'd wrap)
       background-color: var(--astuto-grey-light);
@@ -42,9 +39,8 @@
     }
   
     .columnHeader {
-      @extend
-        .card-header,
-        .d-flex;
+      @extend .card-header !optional;
+      @extend .d-flex !optional;
   
       .columnTitle {
         color: white;
@@ -58,18 +54,17 @@
     }
   
     .postLink {
-      @extend .my-2;
+      @extend .my-2 !optional;
   
       &:hover { text-decoration: none; }
     }
   
     .postListItem {
-      @extend
-        .card3D,
-        .d-flex,
-        .flex-column,
-        .m-2,
-        .py-2;
+      @extend .card3D !optional;
+      @extend .d-flex !optional;
+      @extend .flex-column !optional;
+      @extend .m-2 !optional;
+      @extend .py-2 !optional;
     }
   }
 }

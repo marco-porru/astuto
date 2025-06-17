@@ -10,18 +10,16 @@
   .sidebar {
     .postUpdateListContainer {
       .postUpdateList {
-        @extend
-          .scroll-shadows,
-          .w-100;
+        @extend .scroll-shadows !optional;
+        @extend .w-100 !optional;
 
         max-height: 250px;
         overflow-y: scroll;
 
         .postUpdateListItem {
-          @extend
-            .d-flex,
-            .flex-column,
-            .p-2;
+          @extend .d-flex !optional;
+          @extend .flex-column !optional;
+          @extend .p-2 !optional;
 
           &:after { // displays the little centered border under each post update
             content: "";
@@ -33,11 +31,10 @@
           }
 
           .postUpdateListItemHeader {
-            @extend .d-flex;
+            @extend .d-flex !optional;
 
             span {
-              @extend
-                .ml-2;
+              @extend .ml-2 !optional;
 
               font-weight: 600;
               vertical-align: middle;
@@ -45,7 +42,7 @@
           }
 
           .postUpdateListItemBody {
-            @extend .my-1;
+            @extend .my-1 !optional;
 
             font-size: 15px;
 
@@ -57,33 +54,30 @@
 
     .likeListContainer {
       .likeList {
-        @extend
-          .scroll-shadows,
-          .w-100;
+        @extend .scroll-shadows !optional;
+        @extend .w-100 !optional;
 
         max-height: 170px;
         overflow-y: scroll;
         overflow-x: hidden;
 
         .likeListItem {
-          @extend
-            .d-flex,
-            .p-2,
-            .my-1;
+          @extend .d-flex !optional;
+          @extend .p-2 !optional;
+          @extend .my-1 !optional;
 
           .avatar {
-            @extend .align-self-center;
+            @extend .align-self-center !optional;
           }
 
           .likeListItemUserInfo {
-            @extend
-              .d-flex,
-              .flex-column,
-              .ml-3;
+            @extend .d-flex !optional;
+            @extend .flex-column !optional;
+            @extend .ml-3 !optional;
           }
 
           .likeListItemEmail {
-            @extend .mutedText;
+            @extend .mutedText !optional;
 
             font-size: 13px;
           }
@@ -92,68 +86,61 @@
     }
 
     .actionBoxContainer {
-      @extend .text-center;
+      @extend .text-center !optional;
 
       .checkboxSwitch {
-        @extend
-          .mt-1,
-          .mb-2;
+        @extend .mt-1 !optional;
+        @extend .mb-2 !optional;
       }
     }
   }
 
   .postAndCommentsContainer {
-    @extend
-      .card,
-      .flex-grow-1,
-      .p-3,
-      .mb-3;
+    @extend .card !optional;
+    @extend .flex-grow-1 !optional;
+    @extend .p-3 !optional;
+    @extend .mb-3 !optional;
 
     .postInfo {
-      @extend
-        .d-flex,
-        .mb-2;
+      @extend .d-flex !optional;
+      @extend .mb-2 !optional;
 
       span {
-        @extend .mr-2;
+        @extend .mr-2 !optional;
       }
     }
 
     .postHeader {
-      @extend
-        .d-flex,
-        .mb-3;
+      @extend .d-flex !optional;
+      @extend .mb-3 !optional;
 
       a {
-        @extend
-          .ml-1;
-        
+        @extend .ml-1 !optional;
         line-height: 1em;
       }
     }
 
     .postSettings {
-      @extend
-        .d-flex,
-        .justify-content-between;
+      @extend .d-flex !optional;
+      @extend .justify-content-between !optional;
     }
 
     .postDescription {
-      @extend
-        .my-4;
+      @extend .my-4 !optional;
 
       color: var(--astuto-black);
 
       p:last-child {
-        @extend .mb-0;
+        @extend .mb-0 !optional;
       }
     }
 
     .postAttachments {
-      @extend .mb-4;
+      @extend .mb-4 !optional;
 
       .postAttachment {
-        @extend .mx-2, .p-2;
+        @extend .mx-2 !optional;
+        @extend .p-2 !optional;
 
         height: 80px;
         border: thin solid var(--astuto-grey-light);
@@ -162,19 +149,18 @@
 
     .postFooter {
       .postAuthor {
-        @extend
-          .mutedText,
-          .mb-2;
+        @extend .mutedText !optional;
+        @extend .mb-2 !optional;
 
-        .postAuthorAvatar { @extend .avatar; }
+        .postAuthorAvatar { @extend .avatar !optional; }
       }
 
-      .postFooterActions { @extend .d-flex; }
+      .postFooterActions { @extend .d-flex !optional; }
     }
 
     .postEditForm {
       .form-control {
-        @extend .my-3;
+        @extend .my-3 !optional;
       }
 
       .postDescription {
@@ -184,7 +170,9 @@
       }
 
       .postEditFormButtons {
-        @extend .d-flex, .justify-content-end, .mt-3;
+        @extend .d-flex !optional;
+        @extend .justify-content-end !optional;
+        @extend .mt-3 !optional;
       }
 
       #selectPickerBoard { margin-right: 4px !important; }

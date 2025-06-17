@@ -1,25 +1,24 @@
 .postStatusesList {
-  @extend
-    .p-0,
-    .m-0;
+  @extend .p-0 !optional;
+  @extend .m-0 !optional;
  
   list-style: none;
   
   .postStatusEditable {
-    @extend
-      .d-flex,
-      .justify-content-between,
-      .p-3;
+    @extend .d-flex !optional;
+    @extend .justify-content-between !optional;
+    @extend .p-3 !optional;
 
-    .postStatusEditableActions { @extend .d-flex; }
+    .postStatusEditableActions { 
+      @extend .d-flex !optional; 
+    }
   }
 }
 
 .postStatusForm {
-  @extend
-    .d-flex,
-    .flex-grow-1,
-    .m-2;
+  @extend .d-flex !optional;
+  @extend .flex-grow-1 !optional;
+  @extend .m-2 !optional;
 
   column-gap: 8px;
 

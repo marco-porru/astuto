@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 
 import Button from '../../common/Button';
 import { DangerText } from '../../common/CustomTexts';

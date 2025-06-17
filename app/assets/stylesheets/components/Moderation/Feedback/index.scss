@@ -1,27 +1,24 @@
 .feedbackModerationContainer {
   .badges {
-    @extend
-      .d-flex,
-      .flex-row,
-      .flex-wrap;
+    @extend .d-flex !optional;
+    @extend .flex-row !optional;
+    @extend .flex-wrap !optional;
 
     row-gap: 8px;
   }
 
   .changeFeedbackModerationSettingsLink {
-    @extend
-      .align-self-auto,
-      .mt-2;
+    @extend .align-self-auto !optional;
+    @extend .mt-2 !optional;
   }
 
   .filterModerationFeedbackNav {
-    @extend
-      .nav,
-      .nav-pills,
-      .align-self-center,
-      .px-2,
-      .py-1,
-      .mt-4;
+    @extend .nav !optional;
+    @extend .nav-pills !optional;
+    @extend .align-self-center !optional;
+    @extend .px-2 !optional;
+    @extend .py-1 !optional;
+    @extend .mt-4 !optional;
 
     background-color: var(--astuto-grey-light);
     border-radius: 0.5rem;
@@ -31,9 +28,8 @@
     }
 
     .nav-link {
-      @extend
-        .px-3,
-        .py-1;
+      @extend .px-3 !optional;
+      @extend .py-1 !optional;
 
       color: var(--astuto-black);
 
@@ -46,35 +42,34 @@
   }
 
   .emptyList {
-    @extend .mt-4, .mb-2;
+    @extend .mt-4 !optional;
+    @extend .mb-2 !optional;
 
     text-align: center;
   }
 
   .feedbackModerationList {
     .feedbackListItem {
-      @extend
-        .d-flex,
-        .flex-row,
-        .justify-content-between,
-        .my-4,
-        .mx-2,
-        .p-2;
+      @extend .d-flex !optional;
+      @extend .flex-row !optional;
+      @extend .justify-content-between !optional;
+      @extend .my-4 !optional;
+      @extend .mx-2 !optional;
+      @extend .p-2 !optional;
 
       .feedbackListItemIconAndContent {
-        @extend .d-flex;
+        @extend .d-flex !optional;
 
         .feedbackListItemIcon {
-          @extend .align-self-center;
+          @extend .align-self-center !optional;
         }
         
         .feedbackListItemContent {
-          @extend .ml-4;
+          @extend .ml-4 !optional;
   
           .feedbackListItemTitle {
-            @extend
-              .font-weight-bold,
-              .mb-1;
+            @extend .font-weight-bold !optional;
+            @extend .mb-1 !optional;
 
             &:hover {
               cursor: pointer;
@@ -89,8 +84,7 @@
       }
 
       .feedbackListItemActions {
-        @extend
-          .d-flex;
+        @extend .d-flex !optional;
       }
     }
   }

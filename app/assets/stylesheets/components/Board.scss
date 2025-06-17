@@ -20,13 +20,12 @@
     }
 
     .boardDescription {
-      @extend .mutedText;
+      @extend .mutedText !optional;
     }
 
     .newPostForm {
-      @extend
-        .mt-4,
-        .mb-2;
+      @extend .mt-4 !optional;
+      @extend .mb-2 !optional;
 
       #postDescription {
         height: 100px;
@@ -54,7 +53,7 @@
     }
 
     .anonymousFeedbackLink {
-      @extend .my-2;
+      @extend .my-2 !optional;
     }
 
     /* style lists */
@@ -71,25 +70,23 @@
   }
   
   .sidebarFilters {
-    @extend .m-0, .p-0;
+    @extend .m-0 !optional;
+    @extend .p-0 !optional;
   }
 
   .postStatusListItemContainer {
-    @extend
-      .d-flex,
-      .align-self-stretch;
+    @extend .d-flex !optional;
+    @extend .align-self-stretch !optional;
   }
 
   .postStatusListItemLink {
-    @extend
-      .flex-grow-1;
+    @extend .flex-grow-1 !optional;
 
     &:hover { text-decoration: none; }
   }
 
   .postStatusListItem {
-    @extend
-      .p-1;
+    @extend .p-1 !optional;
 
     height: 40px;
 
@@ -108,12 +105,11 @@
   }
 
   .resetFilter {
-    @extend
-      .flex-grow-0,
-      .flex-shrink-0,
-      .rounded-circle,
-      .align-self-center,
-      .p-0;
+    @extend .flex-grow-0 !optional;
+    @extend .flex-shrink-0 !optional;
+    @extend .rounded-circle !optional;
+    @extend .align-self-center !optional;
+    @extend .p-0 !optional;
 
     width: 30px;
     height: 30px;
@@ -121,25 +117,23 @@
   }
 
   .dateFilterBox {
-    label { @extend .m-0; }
-    #startDateFilter, #endDateFilter { @extend .mb-1; }
+    label { @extend .m-0 !optional; }
+    #startDateFilter, #endDateFilter { @extend .mb-1 !optional; }
   }
 
   .postList {
-    @extend
-      .d-flex,
-      .flex-column,
-      .flex-grow-1;
+    @extend .d-flex !optional;
+    @extend .flex-column !optional;
+    @extend .flex-grow-1 !optional;
   }
 
   .postListItem {
-    @extend
-      .card3D,
-      .d-flex,
-      .flex-row,
-      .justify-content-start,
-      .mb-3,
-      .p-3;
+    @extend .card3D !optional;
+    @extend .d-flex !optional;
+    @extend .flex-row !optional;
+    @extend .justify-content-start !optional;
+    @extend .mb-3 !optional;
+    @extend .p-3 !optional;
 
     min-height: 140px;
     color: var(--astuto-black);
@@ -151,28 +145,25 @@
     &:hover { cursor: pointer; }
 
     .postContainer {
-      @extend
-        .d-flex,
-        .flex-column,
-        .justify-content-between;
+      @extend .d-flex !optional;
+      @extend .flex-column !optional;
+      @extend .justify-content-between !optional;
     }
   }
 
   .postTitle {
-    @extend
-      .font-weight-bold,
-      .mb-2;
+    @extend .font-weight-bold !optional;
+    @extend .mb-2 !optional;
   }
 
   .postDetails {
-    @extend
-      .d-flex,
-      .justify-content-start,
-      .text-uppercase,
-      .mt-2;
+    @extend .d-flex !optional;
+    @extend .justify-content-start !optional;
+    @extend .text-uppercase !optional;
+    @extend .mt-2 !optional;
 
     .badge {
-      @extend .mr-2;
+      @extend .mr-2 !optional;
     }
   }
 }

@@ -1,8 +1,7 @@
 .likeButtonContainer {
-  @extend
-    .d-flex,
-    .flex-column,
-    .mr-3;
+  @extend .d-flex !optional;
+  @extend .flex-column !optional;
+  @extend .mr-3 !optional;
 
   .likeButton:hover {
     cursor: pointer;
@@ -10,8 +9,7 @@
   }
 
   .likeCountLabel {
-    @extend .mt-2;
-    
+    @extend .mt-2 !optional;
     text-align: center;
   }
 

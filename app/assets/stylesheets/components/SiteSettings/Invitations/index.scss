@@ -5,13 +5,13 @@
 
   .submitFormDiv {
     button {
-      @extend .mr-4;
+      @extend .mr-4 !optional;
 
       vertical-align: text-bottom;
     }
 
     .testInvitation {
-      @extend .mt-2;
+      @extend .mt-2 !optional;
       
       display: inline-block;
   
@@ -22,13 +22,12 @@
 
 .pastInvitationsBox {
   .filterInvitationsNav {
-    @extend
-      .nav,
-      .nav-pills,
-      .align-self-center,
-      .px-2,
-      .py-1,
-      .mt-4;
+    @extend .nav !optional;
+    @extend .nav-pills !optional;
+    @extend .align-self-center !optional;
+    @extend .px-2 !optional;
+    @extend .py-1 !optional;
+    @extend .mt-4 !optional;
   
     background-color: var(--astuto-grey-light);
     border-radius: 0.5rem;
@@ -38,9 +37,8 @@
     }
   
     .nav-link {
-      @extend
-        .px-3,
-        .py-1;
+      @extend .px-3 !optional;
+      @extend .py-1 !optional;
   
       color: var(--astuto-black);
   
@@ -53,43 +51,43 @@
   }
   
   ul.invitationsList {
-    @extend
-      .scroll-shadows,
-      .mt-4,
-      .pl-0;
+    @extend .scroll-shadows !optional;
+    @extend .mt-4 !optional;
+    @extend .pl-0 !optional;
   
     list-style: none;
     max-height: 500px;
     overflow-y: scroll;
   
     li.invitationListItem {
-      @extend
-        .d-flex,
-        .justify-content-between,
-        .my-2,
-        .p-2;
+      @extend .d-flex !optional;
+      @extend .justify-content-between !optional;
+      @extend .my-2 !optional;
+      @extend .p-2 !optional;
   
       div.invitationUserInfo {
-        @extend .d-flex;
+        @extend .d-flex !optional;
   
         span.invitationEmail {
-          @extend
-            .align-self-center,
-            .ml-4;
+          @extend .align-self-center !optional;
+          @extend .ml-4 !optional;
   
           font-size: 18px;
         }
       }
   
       div.invitationInfo {
-        @extend .d-flex;
+        @extend .d-flex !optional;
   
-        span.invitationAcceptedAt, span.invitationSentAt, span.invitationExpired {
-          @extend .align-self-center, .mutedText;
+        span.invitationAcceptedAt, 
+        span.invitationSentAt, 
+        span.invitationExpired {
+          @extend .align-self-center !optional;
+          @extend .mutedText !optional;
         }
 
         span.invitationExpired {
-          @extend .text-danger;
+          @extend .text-danger !optional;
         }
       }
     }

@@ -5,24 +5,25 @@
 
 .tenantSignUpContainer {
   @extend .smallContainer;
-  
+
   h1, h2, h3 {
     text-align: center;
     margin-bottom: 16px;
   }
 
   .emailAuth {
-    @extend .mt-2, .mb-2;
+    @extend .mt-2 !optional;
+    @extend .mb-2 !optional;
   }
-  
+
   .userConfirm, .tenantConfirm {
     display: block;
     margin: 0 auto;
     margin-top: 16px;
   }
-  
+
   .userPasswordDiv, .userPasswordConfirmationDiv {
-    @extend .col-6;
+    @extend .col-6 !optional;
     padding-left: 0;
     padding-right: 0;
   }
@@ -33,7 +34,7 @@
   .userRecap {
     text-align: center;
     margin-bottom: 0;
-  
+
     .editUser {
       display: block;
       width: fit-content;

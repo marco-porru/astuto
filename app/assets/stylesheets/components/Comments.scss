@@ -1,170 +1,50 @@
-.commentsContainer {
-  @extend .mt-2;
+.newCommentForm {
+  @extend .d-flex !optional;
+  @extend .flex-column !optional;
+  @extend .mt-4 !optional;
 
-  .attachFilesSectionHidden { display: none; }
-
-  .commentForm {
-    @extend
-      .form-control,
-      .w-100,
-      .p-2,
-      .mr-2;
-
-    height: 80px;
-    min-height: 80px;
-    resize: vertical;
-    
-    border: thin solid grey;
-    border-radius: 4px;
+  .newCommentBodyForm {
+    @extend .d-flex !optional;
   }
 
-  .newCommentForm {
-    @extend
-      .d-flex,
-      .flex-column,
-      .mt-4;
+  .newCommentFooter {
+    @extend .d-flex !optional;
+    @extend .justify-content-between !optional;
+    @extend .align-items-center !optional;
 
-    .newCommentBodyForm {
-      @extend .d-flex;
-    }
-
-    .newCommentFooter {
-      @extend
-        .d-flex,
-        .justify-content-between,
-        .align-items-center;
-
-      .attachFilesSection {
-        margin-left: 58px;
-        margin-top: 1rem;
-      }
-    }
-
-    .commentIsUpdateForm {
-      @extend
-        .d-flex,
-        .flex-column,
-        .align-self-start,
-        .mt-3;
-
-      &.commentIsUpdateFormWithAttachment {
-        margin-right: 108px;
-        .checkboxSwitch { align-self: flex-end; }
-      }
-      &.commentIsUpdateFormWithoutAttachment {
-        margin-left: 58px;
-        .checkboxSwitch { align-self: flex-start; }
-      }
-    }
-
-    .currentUserAvatar {
-      @extend
-        .avatar,
-        .align-self-end,
-        .mr-2;
-    }
-
-    .submitCommentButton {
-      @extend
-        .align-self-end;
-
-      box-sizing: border-box;
-      width: 120px;
-      height: 40px;
+    .attachFilesSection {
+      margin-left: 58px;
+      margin-top: 1rem;
     }
   }
 
-  .editCommentForm {
-    @extend .my-3;
+  .commentIsUpdateForm {
+    @extend .d-flex !optional;
+    @extend .flex-column !optional;
+    @extend .align-self-start !optional;
+    @extend .mt-3 !optional;
 
-    background-color: rgb(255 255 215);
-    padding: 16px;
-
-    .commentFormContainer, .editCommentFormAttachments { @extend .d-block; }
-
-    textarea {
-      @extend .my-2;
+    &.commentIsUpdateFormWithAttachment {
+      margin-right: 108px;
+      .checkboxSwitch { align-self: flex-end; }
     }
-
-    & > div {
-      @extend
-        .d-flex,
-        .justify-content-between;
+    &.commentIsUpdateFormWithoutAttachment {
+      margin-left: 58px;
+      .checkboxSwitch { align-self: flex-start; }
     }
-
-    .editCommentFormFooter {
-      @extend
-        .d-flex,
-        .justify-content-between,
-        .align-items-center;
-    }
-
-    .editCommentFormActions { @extend .d-flex; }
   }
 
-  .commentsTitle {
-    @extend
-      .text-secondary,
-      .text-uppercase,
-      .font-weight-lighter,
-      .mt-5,
-      .mb-2;
+  .currentUserAvatar {
+    @extend .avatar !optional;
+    @extend .align-self-end !optional;
+    @extend .mr-2 !optional;
   }
 
-  .commentList { @extend .mb-4; }
+  .submitCommentButton {
+    @extend .align-self-end !optional;
 
-  .commentList > .commentList {
-    padding-left: 32px;
-  }
-
-  .comment {
-    @extend
-      .mb-2;
-
-    .commentHeader {
-      @extend
-        .d-flex,
-        .align-items-end,
-        .titleText;
-
-      height: 36px;
-
-      .commentAuthor {
-        @extend .ml-2;
-
-        vertical-align: middle;
-      }
-
-      .postUpdateBadge {
-        @extend
-          .badge,
-          .badgeLight,
-          .ml-2;
-      }
-    }
-
-    .commentBody {
-      @extend .my-2;
-
-      p { @extend .my-2; }
-      p:nth-child(1) { @extend .m-0; }
-    }
-
-    .commentAttachments {
-      @extend .mb-4;
-
-      .commentAttachment {
-        @extend .mx-2, .p-2;
-
-        height: 60px;
-        border: thin solid var(--astuto-grey-light);
-      }
-    }
-
-    .commentFooter {
-      @extend .d-flex;
-
-      font-size: 13px;
-    }
+    box-sizing: border-box;
+    width: 120px;
+    height: 40px;
   }
 }

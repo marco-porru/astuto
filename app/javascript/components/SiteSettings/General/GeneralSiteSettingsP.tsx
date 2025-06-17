@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 
 import Box from '../../common/Box';
 import SiteSettingsInfoBox from '../../common/SiteSettingsInfoBox';

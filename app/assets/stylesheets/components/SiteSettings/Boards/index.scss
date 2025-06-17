@@ -1,46 +1,43 @@
 .boardsList {
-  @extend
-    .p-0,
-    .m-0;
+  @extend .p-0 !optional;
+  @extend .m-0 !optional;
  
   list-style: none;
   
   .boardEditable {
-    @extend
-      .d-flex,
-      .justify-content-between,
-      .p-3;
+    @extend .d-flex !optional;
+    @extend .justify-content-between !optional;
+    @extend .p-3 !optional;
 
     column-gap: 32px;
 
     .boardInfo {
-      @extend
-        .d-flex,
-        .flex-column;
+      @extend .d-flex !optional;
+      @extend .flex-column !optional;
         
       row-gap: 8px;
 
-      .boardName { @extend .align-self-center; }
-      .boardDescription { @extend .text-center; }
+      .boardName { @extend .align-self-center !optional; }
+      .boardDescription { @extend .text-center !optional; }
     }
 
     .boardEditableActions {
-      @extend .d-flex, .align-self-center;
+      @extend .d-flex !optional;
+      @extend .align-self-center !optional;
     }
   }
 }
 
 .boardForm {
-  @extend
-    .d-flex,
-    .flex-column,
-    .m-2;
+  @extend .d-flex !optional;
+  @extend .flex-column !optional;
+  @extend .m-2 !optional;
 
   flex-grow: 1;
   row-gap: 8px;
 
   .boardMandatoryForm {
-    @extend .d-flex;
+    @extend .d-flex !optional;
 
     column-gap: 8px;
   }

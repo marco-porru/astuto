@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useDropzone} from 'react-dropzone';
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 import { SmallMutedText } from './CustomTexts';
 import ActionLink from './ActionLink';
 import { DeleteIcon } from './Icons';

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 import { loadStripe } from '@stripe/stripe-js';
 
 import ITenantBilling, { TENANT_BILLING_STATUS_ACTIVE, TENANT_BILLING_STATUS_CANCELED, TENANT_BILLING_STATUS_TRIAL } from '../../interfaces/ITenantBilling';

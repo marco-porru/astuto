@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
-import I18n from 'i18n-js';
+import { I18n } from 'i18n-js';
 
 import IPost, { POST_APPROVAL_STATUS_APPROVED, POST_APPROVAL_STATUS_PENDING, postJSON2JS } from '../../interfaces/IPost';
 import IPostStatus from '../../interfaces/IPostStatus';
