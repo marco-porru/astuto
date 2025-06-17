@@ -39,7 +39,7 @@ COPY . .
 # Build Swagger API documentation (optional: can be done in stage prod)
 RUN RSWAG_SWAGGERIZE=true RAILS_ENV=test bundle exec rake rswag:specs:swaggerize
 
-# Precompile assets (prod only, facoltativo qui)
+# Precompile assets (prod only, optional)
 RUN SECRET_KEY_BASE=dummy RAILS_ENV=production bundle exec rails assets:precompile
 
 # -- Dev stage --

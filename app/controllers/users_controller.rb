@@ -16,6 +16,10 @@ class UsersController < ApplicationController
     @users = @users.where(blocked: params[:blocked]) if params[:blocked].present?
     @users = @users.order(role: :desc, created_at: :desc)
 
+    @users = @users.map do |user|
+      user.attributes.merge(avatar_url: user.avatar.attached? ? user.avatar.blob.url : nil)
+    end
+
     render json: @users
   end
 
