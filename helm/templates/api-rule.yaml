@@ -11,6 +11,9 @@ spec:
       methods:
         - GET
         - POST
+        - PUT
+        - PATCH
+        - DELETE
       noAuth: true
   service:
     name: {{ .Values.image.name }}

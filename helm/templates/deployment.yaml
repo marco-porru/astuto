@@ -84,6 +84,20 @@ spec:
             - name: db-secret
               mountPath: {{ .Values.web.secretMountPath }}
               readOnly: true
+          securityContext:
+            runAsUser: 999
+            runAsGroup: 999
+            allowPrivilegeEscalation: false
+            privileged: false
+            runAsNonRoot: true
+            capabilities:
+              drop:
+                - ALL
+            readOnlyRootFilesystem: {{ .Values.readOnlyRootFilesystem | default false }}
+            seccompProfile:
+                type: RuntimeDefault
+            appArmorProfile:
+                type: RuntimeDefault
       volumes:
         - name: db-secret
           secret:
