@@ -31,4 +31,13 @@ module OAuthsHelper
       nil
     end
   end
+
+  def extract_user_name(user_profile, json_user_name_path)
+    result = query_path_from_object(user_profile, json_user_name_path)
+    if result.is_a?(Array)
+      result.compact.join(' ')
+    else
+      result
+    end
+  end
 end

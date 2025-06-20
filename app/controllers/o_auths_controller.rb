@@ -81,7 +81,7 @@ class OAuthsController < ApplicationController
       @user_email = query_path_from_object(user_profile, @o_auth.json_user_email_path)
       @email_valid = URI::MailTo::EMAIL_REGEXP.match?(@user_email)
       if not @o_auth.json_user_name_path.blank?
-        @user_name = query_path_from_object(user_profile, @o_auth.json_user_name_path)
+        @user_name = extract_user_name(user_profile, @o_auth.json_user_name_path)
         @name_valid = !@user_name.nil?
       end
 
@@ -93,7 +93,7 @@ class OAuthsController < ApplicationController
 
       @user_email = query_path_from_object(user_profile, @o_auth.json_user_email_path)
       if not @o_auth.json_user_name_path.blank?
-        @user_name = query_path_from_object(user_profile, @o_auth.json_user_name_path)
+        @user_name = extract_user_name(user_profile, @o_auth.json_user_name_path)
         @user_name = @user_name || I18n.t('defaults.user_full_name')
       end
 

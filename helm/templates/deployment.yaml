@@ -84,6 +84,9 @@ spec:
             - name: db-secret
               mountPath: {{ .Values.web.secretMountPath }}
               readOnly: true
+            - name: local-files
+              mountPath: /astuto/storage/
+              readOnly: false
           securityContext:
             runAsUser: 999
             runAsGroup: 999
@@ -99,6 +102,9 @@ spec:
             appArmorProfile:
                 type: RuntimeDefault
       volumes:
+        - name: local-files
+          persistentVolumeClaim:
+            claimName: local-files-pvc
         - name: db-secret
           secret:
             secretName: {{ .Values.web.secretName }}

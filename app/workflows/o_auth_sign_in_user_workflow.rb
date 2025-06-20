@@ -36,7 +36,7 @@ class OAuthSignInUserWorkflow
       
       if user.nil?
         if not @o_auth.json_user_name_path.blank?
-          full_name = query_path_from_object(@user_profile, @o_auth.json_user_name_path)
+          full_name = extract_user_name(@user_profile, @o_auth.json_user_name_path)
         end
         full_name ||= I18n.t('defaults.user_full_name')
 

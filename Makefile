@@ -30,9 +30,14 @@ all-podman:
 	make build-podman REGISTRY_USERNAME=$$REGISTRY_USERNAME REGISTRY_PASSWORD=$$REGISTRY_PASSWORD REGISTRY_ADDRESS=$$REGISTRY_ADDRESS VERSION=$(VERSION) PTH=$(PTH)
 
 helm-install:
+
+	kubectl get ns $(NAMESPACE) >/dev/null 2>&1 || \
+	kubectl create namespace $(NAMESPACE)
+	kubectl label namespace $(NAMESPACE) istio-injection=enabled --overwrite
 	helm upgrade --install $(DEPLOYMENT_NAME) ./helm/ \
 --namespace $(NAMESPACE) \
 --create-namespace \
---values ./helm/values.yaml
+--values ./helm/values.yaml \
+--wait
 
 .PHONY: build build-podman all all-podman helm-install
